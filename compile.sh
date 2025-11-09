@@ -2,7 +2,6 @@
 
 # Nettoyage des anciens fichiers compilés
 rm -rf framework/out/*
-rm -rf test/WEB-INF/classes/*
 
 cd framework
 javac -d out \
@@ -10,7 +9,7 @@ javac -d out \
 	src/com/myframework/annotation/*.java \
 	src/com/myframework/*.java
 jar cf framwork.jar -C out .
-cp framwork.jar ../test/WEB-INF/lib/
+
 
 # cd ../test
 # javac -d WEB-INF/classes -cp "/home/diary/Documents/L2/apache-tomcat-10.1.28/lib/servlet-api.jar:WEB-INF/lib/*" src/com/example/*.java
